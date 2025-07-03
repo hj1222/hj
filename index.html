@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>이현정 포트폴리오</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <style>
+  :root {
+    --main-mint: #A3E4DB;
+  }
+  body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f5f5f5;
+    color: #222;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  header .logo {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #000; /* 검정색으로 변경 */
+  }
+  nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #444;
+    font-size: 0.95em;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: var(--main-mint);
+  }
+.hero {
+  display: flex;
+  justify-content: center;  /* 전체 가운데 정렬 */
+  align-items: center;      /* 수직 정렬 */
+  text-align: left;
+  padding: 80px 20px;
+  background: #fff;
+  gap: 30px;                /* 이미지와 텍스트 간격 */
+}
+
+ .hero img {
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hero-text {
+  max-width: 600px;
+  line-height: 1.7;
+  color: #555;
+}
+
+  .hero h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  .hero p {
+    font-size: 1.05em;
+    color: #555;
+    max-width: 600px;
+    line-height: 1.7;
+  }
+  .section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+    margin: 30px 0;
+  }
+  .section h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: var(--main-mint);
+  }
+  .section p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .category-card {
+    background: #fafafa;
+    border: 2px solid var(--main-mint);
+    border-radius: 10px;
+    padding: 30px;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .category-card img {
+    width: 80px;
+    margin-bottom: 15px;
+  }
+  .category-card h3 {
+    font-size: 1.05em;
+    margin-bottom: 10px;
+    color: var(--main-mint);
+  }
+  footer {
+    text-align: center;
+    padding: 30px;
+    background: #eee;
+    font-size: 0.9em;
+    color: #777;
+  }
+  @media (max-width: 768px) {
+  .section h2 {
+    font-size: 1.5em;  /* 제목 크기 조정 */
+  }
+
+  .section p {
+    font-size: 1.1em;  /* 본문 글씨 크기 조정 */
+  }
+
+  iframe {
+    width: 100%;
+    height: 600px;  /* 모바일에서 폼 크기 조정 */
+  }
+}
+.language-switcher {
+  margin-left: 20px;
+}
+
+.language-switcher button {
+  background-color: #A3E4DB;
+  border: none;
+  padding: 8px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.language-switcher button:hover {
+  background-color: #7ec7b6;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="logo">Hyun Jeong</div>
+  <nav>
+    <a href="#about">소개</a>
+    <a href="#projects">프로젝트</a>
+    <a href="#contact">연락하기</a>
+  </nav>
+  <div class="language-switcher">
+    <button id="korean-btn" onclick="switchLanguage('ko')">한글</button>
+    <button id="english-btn" onclick="switchLanguage('en')">English</button>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="photo1.png" alt="이현정 사진">
+  <div class="hero-text">
+    <h1>Lee Hyun Jeong</h1>
+  </div>
+</section>
+
+
+
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>학업과 함께 다양한 분야의 프로젝트를 경험하며 배우고 있습니다. 
+    문제를 해결하고 창의적인 아이디어를 실현하는 과정에서 많은 것을 배우고 있으며, 향후 실무 경험을 쌓아 더 나은 전문성을 키워가고자 합니다.</p>
+</section>
+
+<section id="projects" class="section">
+  <h2 id="projects-title">프로젝트</h2>
+  <div class="categories">
+    <div class="category-card">
+      <img src="icon1.png" alt="아이콘">
+      <h3 id="project1-title">1인 여행 웹사이트</h3>
+      <p id="project1-desc">혼자 떠나는 여행자를 위한 정보 공유 플랫폼</p>
+    </div>
+  
+    <div class="category-card">
+      <img src="icon2.png" alt="아이콘">
+      <h3 id="project2-title">포트폴리오 디자인</h3>
+      <p id="project2-desc">개인 브랜딩을 위한 웹 포트폴리오 제작</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="section">
+  <h2>연락하기</h2>
+  <p>이메일:leehyunjeong1222@naver.com</p>
+  
+
+</section>
+
+<style>
+  @media (max-width: 768px) {
+    .section h2 {
+      font-size: 1.5em;  /* 제목 크기 조정 */
+    }
+
+    .section p {
+      font-size: 1.1em;  /* 본문 글씨 크기 조정 */
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;  /* 모바일에서 폼 크기 조정 */
+    }
+  }
+</style>
+
+<footer>
+  © 2025 이현정. All rights reserved.
+</footer>
+
+
+<script>
+ function switchLanguage(language) {
+  const textContent = {
+    ko: {
+      introTitle: "이현정",
+      aboutTitle: "About Me",
+      aboutText: "학업과 함께 다양한 분야의 프로젝트를 경험하며 배우고 있습니다. 문제를 해결하고 창의적인 아이디어를 실현하는 과정에서 많은 것을 배우고 있으며, 향후 실무 경험을 쌓아 더 나은 전문성을 키워가고자 합니다.",
+      contactTitle: "연락하기",
+      contactText: "아래 폼을 통해 연락주세요:",
+      projectsTitle: "프로젝트",
+      project1Title: "1인 여행 웹사이트",
+      project1Desc: "혼자 떠나는 여행자를 위한 정보 공유 플랫폼",
+      project2Title: "포트폴리오 디자인",
+      project2Desc: "개인 브랜딩을 위한 웹 포트폴리오 제작"
+    },
+    en: {
+      introTitle: "Lee Hyun-jeong",
+      aboutTitle: "About Me",
+      aboutText: "I am learning and gaining experience through various projects while studying. I enjoy solving problems and bringing creative ideas to life, learning a lot in the process. I aim to gain practical experience and develop my skills further in the future.",
+      contactTitle: "Contact",
+      contactText: "Please contact me through the form below:",
+      projectsTitle: "Projects",
+      project1Title: "Solo Travel Website",
+      project1Desc: "A platform for sharing information for solo travelers",
+      project2Title: "Portfolio Design",
+      project2Desc: "Web portfolio creation for personal branding"
+    }
+  };
+
+  // 텍스트 변경
+  document.querySelector('.hero h1').textContent = textContent[language].introTitle;
+  
+  // About 섹션
+  document.querySelector('#about h2').textContent = textContent[language].aboutTitle;
+  document.querySelector('#about p').textContent = textContent[language].aboutText;
+
+  // Contact 섹션
+  document.querySelector('#contact h2').textContent = textContent[language].contactTitle;
+  document.querySelector('#contact p').textContent = textContent[language].contactText;  // 추가된 부분
+  
+  // 프로젝트 섹션
+  document.querySelector('#projects-title').textContent = textContent[language].projectsTitle;
+  document.querySelector('#project1-title').textContent = textContent[language].project1Title;
+  document.querySelector('#project1-desc').textContent = textContent[language].project1Desc;
+  document.querySelector('#project2-title').textContent = textContent[language].project2Title;
+  document.querySelector('#project2-desc').textContent = textContent[language].project2Desc;
+}
+</script>
+
+
+
+
+
+</body>
+</html>
